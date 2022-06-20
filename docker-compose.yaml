@@ -1,0 +1,13 @@
+version: '3.8'
+networks: # to create a custom bridge
+  jj111: 
+services:
+  ashuapp007:
+    image: jjciapp:v1 
+    build: . 
+    container_name: jjcic1
+    ports:
+    - "1111:80"
+    restart: always 
+    networks: # use bridge created above 
+    - jj111
